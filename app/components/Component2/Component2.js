@@ -16,7 +16,7 @@ export default class Component2 extends Component{
             <Text>View 2</Text>
           </View>
           <View style={styles.v3}>
-            <Text>View 3</Text>
+            <Text style={styles.vText}>View 3</Text>
           </View>
         </View>
       </View>
@@ -49,6 +49,9 @@ const styles = StyleSheet.create({
     flex:1,
     backgroundColor:'black',
     padding:10
+  },
+  vText: {
+    color:'white'
   }
 });
 
