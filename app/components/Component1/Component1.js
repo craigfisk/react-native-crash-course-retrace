@@ -7,7 +7,7 @@ export default class Component1 extends Component{
     this.state = {
       name: 'Craig',
       showName: true,
-      message: this.props.message
+      message: 'Your message might be: ' + this.props.message
     }
   }
 
