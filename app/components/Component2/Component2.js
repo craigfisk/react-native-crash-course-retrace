@@ -14,7 +14,11 @@ export default class Component2 extends Component{
           <Text style={styles.myText}>Hello Craig </Text>
         </View>
         <View style={styles.container}>
-          <TouchableHighlight style={styles.v1} onPress={this.onPress}>
+          <TouchableHighlight
+            style={styles.v1}
+            onPress={this.onPress}
+            underlayColor="blue"
+            >
             <View>
               <Text>View 1</Text>
             </View>
