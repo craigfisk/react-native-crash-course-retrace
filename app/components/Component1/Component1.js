@@ -12,11 +12,12 @@ export default class Component1 extends Component{
   }
 
   static defaultProps = {
-    message: 'Fruit cake!'
+    message: 'Fruit cake is really tasty!'
   }
 
   render(){
     let name = this.state.showName ? this.state.name : 'No name!';
+    console.log('Hello! Value for name: ' + name);
     return(
       <View>
         <Text>{this.state.message}</Text>
