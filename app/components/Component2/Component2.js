@@ -1,7 +1,12 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View, StyleSheet} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet, TouchableHighlight} from 'react-native';
 
 export default class Component2 extends Component{
+
+  onPress(){
+    console.log('Area Pressed');
+  }
+
   render(){
     return(
       <View>
@@ -9,9 +14,11 @@ export default class Component2 extends Component{
           <Text style={styles.myText}>Hello Craig </Text>
         </View>
         <View style={styles.container}>
-          <View style={styles.v1}>
-            <Text>View 1</Text>
-          </View>
+          <TouchableHighlight style={styles.v1} onPress={this.onPress}>
+            <View>
+              <Text>View 1</Text>
+            </View>
+          </TouchableHighlight>
           <View style={styles.v2}>
             <Text>View 2</Text>
           </View>
