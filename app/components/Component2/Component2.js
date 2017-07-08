@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
-import {AppRegistry, Text, View} from 'react-native';
+import {AppRegistry, Text, View, StyleSheet} from 'react-native';
 
 export default class Component2 extends Component{
   render(){
     return(
       <View>
-        <Text>Hello Craig </Text>
+        <Text style={{color:'red'}}>Hello Craig </Text>
       </View>
     );
   }
