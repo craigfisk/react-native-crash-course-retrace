@@ -14,7 +14,11 @@ export default class Component3 extends Component{
       textValue:value
     });
   }
-  
+
+  onSubmit(){
+    console.log('Input submitted');
+  }
+
   render(){
     return(
       <View>
@@ -22,6 +26,7 @@ export default class Component3 extends Component{
           placeholder="Enter text here"
           value={this.state.textValue}
           onChangeText={(value) => this.onChangeText(value)}
+          onSubmitEditing={this.onSubmit}
         />
         <Text>{this.state.textValue}</Text>
       </View>
