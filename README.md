@@ -166,16 +166,16 @@ react-native log-android    // in a 3rd terminal
 
 Confirm that changes flow from editor to phone by changing the message text in your editor and see the resulting change on the phone.
 
-To get live reload working (except on changes to classes):
+To get hot reloading working (except sometimes with changes to state, according to Traversy):
 ```
 adb reverse tcp:8081 tcp:8081
 react-native start          // in a 1st terminal in project directory
 react-native run-android    // in a 2nd terminal in project directory
 // After installation is complete, open "myapp" on the phone and
-// shake to get the menu to appear and enable "hot reload" or "live reload"
+// shake to get the menu to appear and enable "hot reloading"
 ```
 
-This enables automatic rebuild whenever a project file is saved in the editor on the development system. But, often need to re-run `react-native run-android` to get changes effective on the phone. By the way, I admit that I haven't figured out the difference between "live reload" and "hot reload." Either or both seem to work.
+This enables automatic rebuild whenever a project file is saved in the editor on the development system. Sometimes you may need to re-run `react-native run-android` to get changes effective on the phone.
 ```
 Time  Topic
 ----  -----
