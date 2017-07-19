@@ -103,15 +103,17 @@ If there are "unauthorized" or "permissions" problems:
 To fix this problem:
 
 ```
-sudo /home/<user>/Android/Sdk/platform-tools/adb kill-server
-sudo /home/<user>/Android/Sdk/platform-tools/adb start-server
-// now `sudo /home/<user>/Android/Sdk/platform-tools/adb devices`  replies with
+sudo -s  // if `sudo kill-server`, `adb devices` still "no permissions"
+adb kill-server
+adb start-server
 ```
 `adb devices` now shows:
 
-8XV5T15A20007996  	unauthorized   // instead of "no permissions"
-so we've fixed the problem of not connecting to the phone with adb,
-but on the phone there is a message:
+```
+List of devices attached
+8XV5T15A20007996	  device
+```
+And you are good to go. If, however, it shows "unauthorized", check on the phone for a message:
 ```
 "Allow USB debugging?
 The computer's RSA key fingerprint is ....
